@@ -6,7 +6,7 @@ ForgeKit is a modern local development environment designed for developers who w
 
 Run multiple PHP versions, manage local sites, and control your web stack with a clean interface and transparent configuration.
 
----
+<img width="2026" height="1241" alt="image" src="https://github.com/user-attachments/assets/d239fb1a-bd3e-49c7-9bf4-5c94189f64f2" />
 
 ## Why ForgeKit?
 
