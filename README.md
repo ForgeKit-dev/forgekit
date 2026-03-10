@@ -66,7 +66,7 @@ Bug reports and feedback help improve ForgeKit for everyone.
 
 Release notes are available here:
 
-https://forgekit.tools/docs/other/changelog
+https://github.com/ForgeKit-dev/forgekit/blob/main/CHANGELOG.md
 
 ---
 
