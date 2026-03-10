@@ -70,6 +70,16 @@ https://github.com/ForgeKit-dev/forgekit/blob/main/CHANGELOG.md
 
 ---
 
+
+## Community
+
+Join discussions and share ideas:
+
+https://github.com/forgekit-dev/forgekit/discussions
+
+
+---
+
 ## Philosophy
 
 ForgeKit is built around a simple idea:
