@@ -1,5 +1,16 @@
 # Changelog
 
+### 1.1.1
+2026-03-12
+
+### New Features
+- Added links to docs and other locations in main page app
+
+### Improved
+- Fixed link to changelog in updates modal
+
+---
+
 ### 1.1.0
 2026-03-03
 
