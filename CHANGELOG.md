@@ -9,14 +9,12 @@
 - Added fallback php logs in /logs/php-fallback
 
 ### Improved
-- Improved PhpMyAdmin configurations and reliability
-- Better PhpMyAdmin logging
+- improved PhpMyAdmin configurations and reliability
+- better PhpMyAdmin logging
 - min width and height to the UI window
 - fix dropdown menus being hidden by overflow
 - remove legacy mysql error log
 - fix duplicate mysqli php extension for future and existing php.ini files
-- Rearchitected phpMyAdmin to use it's own independent php runtime
-- Updated Nginx php_error.log configuration at startup
 
 ---
 
