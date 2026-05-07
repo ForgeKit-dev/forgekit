@@ -1,5 +1,12 @@
 # Changelog
 
+### 1.2.2
+2026-05-07
+
+### Improved
+- fix onboarding modal running again on startup when it was not needed to, which created default web server
+
+---
 
 ### 1.2.1
 2026-05-07
