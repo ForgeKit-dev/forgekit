@@ -1,6 +1,20 @@
 # Changelog
 
 
+### 1.2.1
+2026-05-07
+
+### Improved
+- allow httpd folders to work not just apache, to better work with newer apache versions
+- make labels text colour black if background is lighter
+- more space and improvement of the sites sidebar
+- added on hover action for the sites in sidebar along with open in browser, open in folder and edit buttons
+- improvements to local binary detection constraints and possible dupplicate IDs
+- added link to updated binary docs in Binary Management Window
+- updated binary labels for installed vs user installed and added them in more places
+
+---
+
 ### 1.2.0
 2026-04-24
 
