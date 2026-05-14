@@ -1,5 +1,19 @@
 # Changelog
 
+
+### 1.3.0
+2026-05-14
+
+### Improved
+- default localhost page
+
+### New Features
+- added the allow directory listing checkbox to sites.This allows folder browsing in the web",
+- added preferences page and moved the theme there",
+- added custom localhost page configuration to preferences which allows user to fully customize the localhost page"
+
+
+---
 ### 1.2.2
 2026-05-07
 
