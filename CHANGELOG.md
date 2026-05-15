@@ -1,5 +1,17 @@
 # Changelog
 
+### 1.3.1
+2026-05-15
+
+### Improved
+- fix redirection bug for custom-localhost-app
+- fix bug that can leave orphaned apache processes on close instead of fully closing them too
+- small UI bug that showed up on preferences data update that might affect the update process
+
+### If you cannot automatically update from the ForgeKit update tab, close ForgeKit fully and manually run the installer ForgeKit-Installer-1.3.1.exe from your ForgeKit installation folder /downloads. Run it on top of your current ForgeKit installation folder and it should all be gucci.
+
+
+---
 
 ### 1.3.0
 2026-05-14
@@ -12,8 +24,8 @@
 - added preferences page and moved the theme there",
 - added custom localhost page configuration to preferences which allows user to fully customize the localhost page"
 
-
 ---
+
 ### 1.2.2
 2026-05-07
 
