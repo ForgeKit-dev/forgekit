@@ -1,5 +1,22 @@
 # Changelog
 
+
+### 1.4.0
+2026-06-28
+
+### New Features
+- added system tray functionality
+- on startup preferences options for start on windows start and restart previous servers
+- added site specific access and error logs
+
+### Improved
+- changed fk-local to localhost-fk in terms fo the custom localhost app redirection
+- improvements to port checking
+- various improvements to UI
+
+
+---
+
 ### 1.3.1
 2026-05-15
 
