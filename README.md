@@ -1,97 +1,190 @@
 # ForgeKit
 
-Powerful local development environments without Docker complexity.
+**Native PHP development for Windows.**
 
-ForgeKit is a modern local development environment designed for developers who want flexibility and performance without the overhead of containers.
+ForgeKit is a Windows-first local PHP development environment for running multiple PHP projects, PHP versions, web servers, databases, and local sites side by side, without Docker, WSL, YAML, accounts, or global PHP conflicts.
 
-Run multiple PHP versions, manage local sites, and control your web stack with a clean interface and transparent configuration.
+[Download for Windows](https://forgekit.tools/) · [Read the Docs](https://forgekit.tools/docs/getting-started/what-is-forgekit) · [Changelog](https://forgekit.tools/docs/other/changelog) · [Discussions](https://github.com/ForgeKit-dev/forgekit/discussions)
 
-<img width="2026" height="1241" alt="image" src="https://github.com/user-attachments/assets/d239fb1a-bd3e-49c7-9bf4-5c94189f64f2" />
+<img width="2026" height="1241" alt="ForgeKit dashboard showing local PHP sites, servers, databases, and development tools" src="https://github.com/user-attachments/assets/d239fb1a-bd3e-49c7-9bf4-5c94189f64f2" />
+
+---
+
+## What is ForgeKit?
+
+ForgeKit helps Windows PHP developers create isolated local development environments without fighting global PHP installs, Docker containers, WSL setup, or fragile manual configuration.
+
+You can run legacy PHP apps, modern PHP projects, Laravel apps, WordPress sites, Apache, Nginx, MySQL, MariaDB, Composer, phpMyAdmin, and local domains from one native Windows app.
+
+ForgeKit is built around a simple idea:
+
+> Local PHP development on Windows should be powerful, predictable, and easy to control.
+
+---
+
+## Who is ForgeKit for?
+
+ForgeKit is built for developers who:
+
+- Work on Windows.
+- Maintain multiple PHP projects.
+- Need different PHP versions side by side.
+- Work with Laravel, WordPress, legacy PHP, or custom PHP apps.
+- Want Apache, Nginx, MySQL, MariaDB, Composer, and phpMyAdmin in one place.
+- Want a local environment without Docker, WSL, YAML, or global PHP conflicts.
+- Prefer a clean UI, but still want access to the underlying configs when needed.
+
+ForgeKit is especially useful if you have ever had to switch PHP versions manually, juggle old and new projects, debug local vhosts, or avoid breaking an existing XAMPP/WAMP/Laragon setup.
+
+---
 
 ## Why ForgeKit?
 
 Many local development tools fall into one of these categories:
 
-• Too limited — only one stack or environment  
-• Too complex — container-based setups with heavy overhead  
-• Too opaque — hidden configs and black-box behaviour  
+- **Too limited** - one stack, one PHP version, or one workflow.
+- **Too heavy** - container-first setups, Docker networking, WSL, and YAML configuration.
+- **Too opaque** - hidden configs, magic behavior, and difficult debugging.
+- **Too global** - one PHP install affects everything on the machine.
 
-ForgeKit aims to provide the best balance:
+ForgeKit aims for a different balance:
 
-**Powerful, transparent, and simple to use.**
+> Simple by default. Transparent when needed.
 
----
-
-## Features
-
-- Multiple PHP versions
-- Apache and Nginx support
-- Simple local site creation
-- Built-in phpMyAdmin and multiple databases
-- Easy access to logs and configs
-- Native Windows performance
-- Transparent configuration
+You can create sites and environments visually, but ForgeKit still keeps the underlying configuration readable and accessible.
 
 ---
 
-## Installation
+## Core features
 
-Download the installer from the official website:
+- Run multiple PHP versions side by side.
+- Create isolated web server environments.
+- Use Apache or Nginx.
+- Use MySQL or MariaDB.
+- Add local sites with custom domains.
+- Open project-aware terminals.
+- Use Composer from the correct environment.
+- Access phpMyAdmin quickly.
+- View logs and configuration files.
+- Run legacy and modern projects at the same time.
+- Keep your existing Windows setup untouched.
+- Use real Windows binaries instead of containers or virtual machines.
 
-https://forgekit.tools
+---
 
-Run the installer and ForgeKit will automatically install the required runtimes and create a default web environment.
+## Example workflows
+
+### Run legacy and modern PHP together
+
+Use PHP 7.4 for an older project and PHP 8.4 for a modern app without changing your global PHP version.
+
+### Maintain multiple client sites
+
+Keep several local sites mapped to their own local domains and assigned to the correct web server/database stack.
+
+### Work without Docker or WSL
+
+Use a native Windows environment without Docker Desktop, WSL2, Linux containers, or YAML-based service definitions.
+
+### Keep control of the plumbing
+
+ForgeKit gives you access to logs, config files, binaries, vhosts, and runtime settings when you need to inspect or customize them.
+
+---
+
+## Quick start
+
+1. Download ForgeKit from the official website:  
+   https://forgekit.tools/
+
+2. Install and open ForgeKit.
+
+3. Create your first web server environment.
+
+4. Add a local site.
+
+5. Choose the PHP version, web server, and database stack you want to use.
+
+6. Open your local site in the browser.
+
+Full guide:  
+https://forgekit.tools/docs/getting-started/what-is-forgekit
 
 ---
 
 ## Documentation
 
-Full documentation is available here:
+The ForgeKit documentation covers installation, sites, servers, databases, binaries, routing, HTTPS, tools, and advanced configuration.
 
-https://forgekit.tools/docs/getting-started/what-is-forgekit
+Start here:
 
----
-
-## Reporting Issues
-
-If you encounter a problem or have a feature request, please open an issue:
-
-https://github.com/forgekit-dev/forgekit/issues
-
-Bug reports and feedback help improve ForgeKit for everyone.
-
----
-
-## Changelog
-
-Release notes are available here:
-
-https://github.com/ForgeKit-dev/forgekit/blob/main/CHANGELOG.md
+- [What is ForgeKit?](https://forgekit.tools/docs/getting-started/what-is-forgekit)
+- [Installation](https://forgekit.tools/docs/getting-started/installation)
+- [First Server](https://forgekit.tools/docs/getting-started/first-server)
+- [Add Site](https://forgekit.tools/docs/getting-started/add-site)
+- [Add Database](https://forgekit.tools/docs/getting-started/add-database)
+- [Binaries and Runtimes](https://forgekit.tools/docs/advanced/binaries-and-runtimes)
+- [Virtual Hosts and Routing](https://forgekit.tools/docs/advanced/vhosts-and-routing)
+- [SSL and HTTPS](https://forgekit.tools/docs/advanced/ssl-and-https)
+- [FAQ](https://forgekit.tools/docs/other/faq)
 
 ---
 
+## Privacy
 
-## Community
+ForgeKit is local-first.
 
-Join discussions and share ideas:
+- No accounts required.
+- No cloud dependency.
+- No app telemetry.
+- Your code and project data stay on your machine.
+- ForgeKit can run alongside your existing local development setup.
 
-https://github.com/forgekit-dev/forgekit/discussions
+Read more:  
+https://forgekit.tools/docs/other/privacy
 
+---
+
+## Current status
+
+ForgeKit is under active development.
+
+It is already usable for real local PHP development workflows, but new features, refinements, and bug fixes are still being added regularly.
+
+You can follow progress in the changelog:
+
+https://forgekit.tools/docs/other/changelog
+
+---
+
+## Feedback and support
+
+Bug reports, setup issues, feature requests, and workflow feedback are welcome.
+
+- [Open an issue](https://github.com/ForgeKit-dev/forgekit/issues)
+- [Start a discussion](https://github.com/ForgeKit-dev/forgekit/discussions)
+- [Request a feature](https://github.com/ForgeKit-dev/forgekit/discussions/new?category=ideas)
+
+Feedback from real Windows PHP developers directly shapes ForgeKit.
 
 ---
 
 ## Philosophy
 
-ForgeKit is built around a simple idea:
+ForgeKit is built around a simple principle:
 
-**Local development environments should be powerful without becoming complicated.**
+> Local development environments should be powerful without becoming complicated.
 
-Developers should be able to control their stack without fighting their tools.
+You should be able to run the stack you need, understand what is happening, and keep control of your machine.
+
+No hidden magic. No global PHP conflicts. No container requirement. No WSL requirement.
+
+Just a native Windows PHP development environment that gets out of your way.
 
 ---
 
 ## License
 
-Copyright © ForgeKit
+Copyright © ForgeKit.
 
 All rights reserved.
