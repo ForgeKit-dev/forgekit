@@ -4,7 +4,7 @@
 
 ForgeKit is a Windows-first local PHP development environment for running multiple PHP projects, PHP versions, web servers, databases, and local sites side by side, without Docker, WSL, YAML, accounts, or global PHP conflicts.
 
-[Download for Windows](https://forgekit.tools/) · [Read the Docs](https://forgekit.tools/docs/getting-started/what-is-forgekit) · [Changelog](https://forgekit.tools/docs/other/changelog) · [Discussions](https://github.com/ForgeKit-dev/forgekit/discussions)
+[Download for Windows](https://forgekit.tools/) · [Read the Docs](https://forgekit.tools/docs/getting-started/what-is-forgekit) · [Changelog](https://forgekit.tools/docs/other/changelog) · [Discussions](https://github.com/ForgeKit-dev/forgekit/discussions) · [Guides](https://forgekit.tools/guides)
 
 <img width="2026" height="1241" alt="ForgeKit dashboard showing local PHP sites, servers, databases, and development tools" src="https://github.com/user-attachments/assets/d239fb1a-bd3e-49c7-9bf4-5c94189f64f2" />
 
