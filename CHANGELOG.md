@@ -1,6 +1,15 @@
 # Changelog
 
 
+### 1.4.1
+2026-07-03
+
+### Improved
+- added support for older bootstrapping of mysql 5.6 and older
+- small improvements to UI
+
+---
+
 ### 1.4.0
 2026-06-28
 
