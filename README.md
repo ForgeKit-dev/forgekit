@@ -6,7 +6,11 @@ ForgeKit is a Windows-first local PHP development environment for running multip
 
 [Download for Windows](https://forgekit.tools/) · [Read the Docs](https://forgekit.tools/docs/getting-started/what-is-forgekit) · [Changelog](https://forgekit.tools/docs/other/changelog) · [Discussions](https://github.com/ForgeKit-dev/forgekit/discussions) · [Guides](https://forgekit.tools/guides)
 
-<img width="2026" height="1241" alt="ForgeKit dashboard showing local PHP sites, servers, databases, and development tools" src="https://github.com/user-attachments/assets/d239fb1a-bd3e-49c7-9bf4-5c94189f64f2" />
+Have fun with [Online Interactive Demo](https://forgekit.tools/demo)
+
+<img width="1507" height="1056" alt="image" src="https://github.com/user-attachments/assets/e38a9621-8158-4604-8dff-32b3658edbc5" />
+
+
 
 ---
 
