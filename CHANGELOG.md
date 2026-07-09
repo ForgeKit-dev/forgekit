@@ -8,7 +8,8 @@
 - Lan functionality added. It can be turned on or off from preferences and allows access to local IP address and sites via custom sslip.io urls per site.
 - Preferred apps section added in Preferences tab, with preferred terminal, logs editor and code editor.
 - Open site in terminal and open site in code editor buttons added.
-- Added Sites section in the tray functionality. -Custom binaries in Manage Binaries json. Add your own binaries in custom-binaries.json file for ease and convenience.
+- Added Sites section in the tray functionality. 
+- Custom binaries in Manage Binaries json. Add your own binaries in custom-binaries.json file for ease and convenience.
 
 ### Improved
 - fkit.exe improvement for when there are 2 environments running the same project root. It now allows you to pick which one to use.
