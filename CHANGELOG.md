@@ -9,10 +9,10 @@
 - Preferred apps section added in Preferences tab, with preferred terminal, logs editor and code editor.
 - Open site in terminal and open site in code editor buttons added.
 - Added Sites section in the tray functionality. 
-- Custom binaries in Manage Binaries json. Add your own binaries in custom-binaries.json file for ease and convenience.
+- Custom binaries in Manage Binaries modal. Add your own binaries in custom-binaries.json file for ease and convenience.
 
 ### Improved
-- fkit.exe improvement for when there are 2 environments running the same project root. It now allows you to pick which one to use.
+- fkit.exe terminal shim improvement for when there are 2 environments running the same project root. It now allows you to pick which one to use.
 - Installer no longer feels unresponsive. It might also be faster in cases.
 - Various UI improvements.
 
