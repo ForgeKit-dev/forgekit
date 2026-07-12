@@ -1,5 +1,15 @@
 # Changelog
 
+### 1.5.1
+2026-07-12
+
+### Improved
+- LAN vhosts/server blocks are now consolidated per site (using ServerAlias for Apache, a combined server_name for Nginx) instead of generating a separate duplicate block per hostname.
+- Fixed LAN links being silently upgraded to HTTPS by the browser, which broke access since other LAN devices don't trust ForgeKit's local certificate authority.
+- LAN access is now a real network-level boundary. Previously, turning LAN off only hid the convenience links, but the router still listened on all interfaces and would proxy through to any site whose domain was sent as the Host header. It now binds loopback-only when LAN is off, so the machine is genuinely unreachable from the network.
+- The custom localhost app now also loads when visiting the machine's LAN IP directly, matching its existing behavior on localhost. Previously it always fell back to the default ForgeKit landing page in that case.
+
+---
 
 ### 1.5.0
 2026-07-09
