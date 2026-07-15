@@ -1,5 +1,18 @@
 # Changelog
 
+### 1.6.3
+2026-07-15
+
+
+### Improved
+- Fixed HTTPS sites showing mixed content errors (http:// stylesheets/scripts blocked on an https:// page). PHP now receives the real request scheme through both Apache and Nginx, so Laravel's asset()/url() helpers and similar framework URL generation work correctly
+- Fixed the ForgeKit router silently failing to bind port 80 or 443 if something else briefly held the port at startup. Previously this was only recoverable by toggling LAN on and off; it now retries automatically and keeps retrying in the background until the port is free
+- Added a persistent warning in the app showing which process is blocking port 80 or 443, instead of sites just silently failing to load
+- Agent activity is now logged to logs/agent/agent.log instead of being discarded
+
+
+---
+
 ### 1.6.2
 2026-07-15
 
