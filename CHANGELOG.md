@@ -1,5 +1,23 @@
 # Changelog
 
+
+### 1.6.0
+2026-07-15
+
+### New Features
+- Added Node.js / npm / npx / Corepack / Yarn / pnpm support, selectable per site
+- New `fkit node`, `fkit npm`, `fkit npx`, `fkit corepack`, `fkit yarn`, `fkit pnpm` CLI commands
+- Node version picker added to Add Site / Edit Site modals 
+### Improved
+- Binaries modal: categories are now collapsible, with nested/indented binary lists and the npm version shown next to Node versions
+- Custom Binaries section now grouped by kind (PHP, Node, etc.), same as the main list
+- Add Site / Edit Site modals redesigned into a two-column layout
+- Better error message when trying to remove a Node version that's still assigned to a site
+- Fixed an edge case where switching between two binaries with the same version (e.g. official vs custom) could show the wrong one as current
+- Fixed a bug affecting fresh Nginx-based installs where the first PHP version installed could end up missing php.ini, breaking extensions like mbstring
+
+---
+
 ### 1.5.1
 2026-07-12
 
