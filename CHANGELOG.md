@@ -1,5 +1,15 @@
 # Changelog
 
+### 1.6.2
+2026-07-15
+
+
+### Improved
+- Add Web Server modal no longer lists Node.js versions under "Installed Back End Languages". Node is assigned per-site, not per-web-server, and never worked as a backend language selection there
+- The php.ini fix from 1.6.1 now also runs when a new web server instance is created, so a fresh Nginx server gets a working php.ini immediately instead of on its first start
+
+---
+
 ### 1.6.1
 2026-07-15
 
