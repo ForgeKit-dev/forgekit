@@ -1,5 +1,15 @@
 # Changelog
 
+### 1.6.1
+2026-07-15
+
+
+### Improved
+- fixed onboarding for new users where nginx would not work. Just restart nginx and it will fix itself.
+- fix flashing cmd windows on startup when checking npm versions in installed nodejs for the new 1.6 functionality
+- make the installer shut off fkit.exe cli tool if it's already running in the background, so it doesn't interfere with the update
+
+---
 
 ### 1.6.0
 2026-07-15
