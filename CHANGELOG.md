@@ -1,5 +1,37 @@
 # Changelog
 
+
+### 1.7.0
+2026-07-18
+
+### New Features
+- phpMyAdmin: redesigned the panel with runtime controls (start, stop, restart) and quick-open buttons for its config and log files
+- phpMyAdmin: panel now also shows the connected database server's own my.ini and error log, alongside phpMyAdmin's runtime files
+- phpMyAdmin: added a large imports folder - drop a big SQL file in and pick it from the Import tab instead of uploading it through the browser
+- Database servers: added a Logs dropdown next to Config on each database panel, with quick-open access to its mysql-error.log
+- Updates modal: now shows what changed in every version between yours and the latest, not just the newest release, broken out per version with a link to the full changelog if you're several versions behind
+- Binaries: added support for an external binary catalog URL as an alternative to custom-binaries.json, with a simple radio switcher in Manage Binaries to pick which one is active
+- Jobs/Downloads tray:  added a Cancel button to in-progress jobs (e.g. an update download), which aborts the work and cleans up any partial file. Also moved to bottom right so it's more out of the way
+
+
+### Improved
+- phpMyAdmin: fixed large SQL imports failing with a maximum execution time error
+- Database: tuned MySQL/MariaDB settings so imports and exports run noticeably faster
+- Updates modal: removed unnecessary channel/minimum-supported info
+- Updates modal: Close/Download/Install bar now stays pinned to the bottom instead of scrolling away with the release notes above it
+- Updates modal: clicking Download twice in a row no longer starts a second download; the button now reads "Downloading…" until the file is actually ready
+- Binaries: fixed a bug where a custom binary (e.g. Node, PHP) installed with the same ID as an official one could disappear from the Official section
+- Binaries: custom binaries now show whether they came from custom-binaries.json or your catalog URL, via a badge and hover tooltip, everywhere you pick a binary (not just Manage Binaries)
+- Binaries: custom catalog entries whose ID collides with ForgeKit's official catalog now show a clear warning instead of silently not appearing
+- Jobs tray: fixed the loading spinner being invisible in both light and dark mode (its highlight color barely differed from the tray background)
+- Logs: opening a log file (e.g. mysql-error.log) that hasn't been written yet now opens an empty file instead of failing with "file not found"; config files still error when missing, since that usually means something's actually wrong
+- Apache: enabled mod_access_compat by default, so old .htaccess files using the legacy Apache 2.2 `allow from`/`deny from` syntax (common in older WordPress installs) work instead of throwing a 500. Existing Apache instances get this automatically on next start, no action needed
+- UI: redesigned the main window - sites and web-servers/databases panels now resize properly, with clearer visual structure, a live status strip, a redesigned jobs tray, and an improved light theme
+- Reliability: significantly refactored how ForgeKit reads and writes its own configuration and binary state internally, closing several rare race conditions where a site, instance, or binary change could be silently lost or overwritten by another action happening around the same time
+
+
+---
+
 ### 1.6.3
 2026-07-15
 
