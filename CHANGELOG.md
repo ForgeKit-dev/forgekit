@@ -1,7 +1,7 @@
 # Changelog
 
 
-### 1.7.0 | Safer Foundations, Better Database Workflows, and Community Catalogues
+### 1.7.0 | Safer Foundations, Better Database Workflows and Community Catalogues
 2026-07-18
 
 ### New Features
