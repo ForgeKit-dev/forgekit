@@ -4,6 +4,8 @@
 ### 1.7.0 | Safer Foundations, Better Database Workflows and Community Catalogues
 2026-07-18
 
+Read the story behind v1.7.0 at https://forgekit.tools/articles/forgekit-v1-7-big-chungus
+
 ### New Features
 - phpMyAdmin: redesigned the panel with runtime controls (start, stop, restart) and quick-open buttons for its config and log files
 - phpMyAdmin: panel now also shows the connected database server's own my.ini and error log, alongside phpMyAdmin's runtime files
