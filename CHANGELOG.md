@@ -1,5 +1,19 @@
 # Changelog
 
+### 1.7.1 Clearer startup diagnostics and a smoother update experience
+2026-07-21
+
+### New Features
+- Installer: added an option (checked by default, also offered on every update) to install the latest Microsoft Visual C++ Runtime, needed by PHP and some other bundled tools
+- Notifications: the message bar now pauses its auto-dismiss timer while your mouse is over it, and restarts the countdown once you move away, so it won't disappear before you've had a chance to read it or copy the message
+
+### Improved
+- Startup errors: nginx, Apache, PHP, and MySQL/MariaDB now report the real reason when they fail to start (e.g. a missing Visual C++ runtime DLL) instead of a generic "did not come up in time" timeout
+- Web servers: reduced the startup wait for nginx, Apache, and PHP from 15s to 10s
+- Databases: reduced the startup wait for MySQL/MariaDB from 60s to 15s
+- Updates modal: each version in "What's changed" can now show a title, subtitle, small image, and a "Read more" link, in addition to the New Features/Improved categories it already had
+
+---
 
 ### 1.7.0 | Safer Foundations, Better Database Workflows and Community Catalogues
 2026-07-18
