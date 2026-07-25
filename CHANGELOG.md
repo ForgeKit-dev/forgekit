@@ -1,5 +1,54 @@
 # Changelog
 
+### 1.8.0 | Mailpit, Redis, Memcached and a lot of UI improvements
+2026-07-25
+
+### New Features
+- Mail Servers: added support for Mailpit, a local SMTP catcher. Create one or more named inboxes and connect a web server's PHP mail() to any of them with a click. Nothing connects automatically.
+- Mail Servers: each inbox shows ready-to-copy SMTP connection info (.env-style, with Laravel and Symfony examples) for apps that configure their own mail client.
+- Mail Servers: a web server can be moved between inboxes at any time, and inboxes respect the LAN preference the same way web servers do.
+- Cache Servers: new "Redis / Cache Servers" tab. Add, start/stop/restart, and remove Redis and Memcached instances the same way as web servers, databases, and mail servers.
+- Cache Servers: each instance shows ready-to-copy connection info (.env-style, with a Laravel example) for both Redis and Memcached.
+- Cache Servers: Redis gets its own redis.conf per instance, created once and never overwritten - open and edit it directly from the instance's Config menu (e.g. to turn persistence back on).
+- Cache Servers: Redis versions offered are 7.0.15 and 8.8.1 (via redis-windows/redis-windows); Memcached is 1.6.8 (via jefyt/memcached-windows). Installed and managed through the existing Manage Binaries flow.
+
+### Improved
+- Manage Binaries: fixed the list flickering/jumping while an install or removal is in progress.
+- Error messages and toast notifications: text is now selectable, and a copy button was added, so you can grab the full message instead of only what's visible.
+- Agent startup: fixed a race where forgekit-agent.exe would show a "port 80/443 already in use" warning for itself on launch.
+- Agent widget: "Could not refresh status" and "Agent not running" no longer flash on normal startup or after an update. The widget shows a "Starting" state while the agent comes up instead of reporting an error.
+- Agent widget: added a spinner for the "Starting" state. The port-in-use warning also now says when it's just a previous ForgeKit instance still shutting down (auto-resolves) versus another app you need to close yourself.
+- Router landing page: added a search box above the site list once you have more than a handful of sites, and the list scrolls on its own instead of growing the whole page.
+- Router landing page: added a Mail Servers section listing every Mailpit inbox with an open-inbox link (and a LAN link, when LAN access is on).
+- Router: https://127.0.0.1/ no longer fails with a TLS error. The auto-issued localhost certificate now includes IP address SANs, and existing installs fix themselves automatically on next agent start.
+- Router landing page: the site list no longer scrolls horizontally on narrow windows. Long folder paths, URLs, and domains wrap instead of overflowing.
+- phpMyAdmin: fixed opening phpMyAdmin failing on a fresh install or new machine. First-time startup can take longer than the old 15s allowed (antivirus scanning php.exe for the first time is a common cause), so the timeout was raised and the modal now offers a "Try again" button instead of a dead end.
+- PHP: gd is now enabled by default for new sites and for phpMyAdmin's runtime. It's only turned on when the matching DLL is actually present, so it can't break an install that doesn't ship it, and it works correctly on PHP 7.4 and earlier where the extension is named gd2.
+- PHP: raised default limits for new sites so heavier scripts (image processing, API calls, larger imports/uploads) don't fail out of the box. memory_limit 128M to 512M, max_execution_time 30s to 300s, and date.timezone now defaults to UTC instead of being unset. Applied to both Apache and nginx sites; nginx sites previously got none of ForgeKit's PHP defaults.
+- nginx: added client_max_body_size (50M) and fastcgi_read_timeout/fastcgi_send_timeout (300s) to site configs. nginx's own 1M upload cap and 60s timeout were overriding the more generous php.ini settings above before PHP ever saw the request.
+- PHP: new PHP binaries and phpMyAdmin's runtime now get a CA certificate bundle out of the box, fixing "SSL certificate problem: unable to get local issuer certificate" on any outbound HTTPS call from PHP's cURL (Laravel's HTTP client, Guzzle, etc.). PHP's Windows builds don't ship one of their own. The bundle is refreshed automatically every time a new ForgeKit release is built, so it stays current without any runtime network dependency.
+- Manage Binaries: opening the modal no longer waits on the custom catalog (a user-supplied JSON file or URL) to load - the official/local binaries list now appears immediately, with the Custom Binaries section loading separately and showing its own spinner. Switching between custom-binaries.json and a catalog URL also only refreshes that section instead of reloading the whole modal.
+- fkit CLI: `fkit npm`/`node`/`npx`/`corepack`/`yarn`/`pnpm` now hand child processes a PATH prefixed with the site's own Node folder. Previously, `fkit npm install` itself always worked, but on a machine with no globally installed Node, any lifecycle/postinstall script that shelled out to `node`/`npm` by name could fail to find them (npm's own PATH-prepending safety net is off by default). This is scoped to the one process fkit spawns per invocation and never touches the parent terminal's real PATH.
+- Preferred Apps: terminal picker now also detects Windows PowerShell, PowerShell 7, Command Prompt, WezTerm, Alacritty, and ConEmu/Cmder, not just Windows Terminal and Git Bash.
+- Preferred Apps: code editor picker now also detects PhpStorm, WebStorm, Zed, GVim, and Neovim Qt. The logs/config editor picker can use any detected code editor too, not just Notepad++/Notepad.
+- Preferred Apps: a manually picked .exe is recognized by filename too, so it still gets full support instead of a bare launch.
+- Preferred Apps: WezTerm, Alacritty, and ConEmu now open with the user's own configured shell instead of always forcing PowerShell.
+- Preferred Apps: fixed Windows PowerShell and Command Prompt opening a window that flashed shut immediately instead of staying open.
+- Preferred Apps: fixed WezTerm not getting the site's PHP/Node on PATH at all.
+- Preferred Apps: known limitation, not fixed - a shell profile that already defines its own php/node command (Laravel Herd does this) can still override ForgeKit's PATH in WezTerm.
+- Preferred Apps: reverted registry/Scoop/Chocolatey/WinGet app detection and Alacritty/ConEmu's auto PHP/Node PATH, added earlier this cycle. Likely why Windows Defender started flagging ForgeKit as a false positive. Detection still works via PATH and each app's install folder.
+- Add Instance: when a database, mail server, cache server, or web server has no matching binary installed yet, the modal now tries to send you straight to Manage Binaries instead of showing a form you can't submit. If an install is already running, it shows up inline as "Installing…" and becomes selectable the moment it finishes.
+- Add Instance / Edit Label: UI Improvements by replacing the separate Preview/Name/Color fields with one row, an editable color pill for the name plus quick-pick swatches (blue, yellow, green, red, or a custom color).
+- Switch PHP Version: a PHP version currently installing now shows up as "Installing…" instead of just not being there, and becomes selectable the moment it finishes.
+- Node version dropdown (Add Site / Edit Site): same fix as above - a Node version currently installing shows inline and updates live once it's done.
+- Manage Binaries: fixed the Custom Binaries section's loading spinner flickering on and off every second while any install was running anywhere in the app, not just in that section.
+- Manage Binaries: title, back, and close buttons now stay pinned in place while the list scrolls instead of scrolling out of view; added a matching footer with the same actions.
+- Add Site: typed-in fields (domain, folder, web server, Node version, HTTPS options) now survive a trip to Manage Binaries and back instead of resetting to blank.
+- Add Site: auto-selects the web server when there's only one, instead of defaulting to "none" and confusing first-time users.
+
+
+---
+
 ### 1.7.1 Clearer startup diagnostics and a smoother update experience
 2026-07-21
 
