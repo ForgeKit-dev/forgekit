@@ -1,5 +1,33 @@
 # Changelog
 
+
+### 1.8.1 Zoom, a resizable layout, and new privacy controls
+2026-09-07
+
+### New Features
+- Zoom: the app can now be zoomed with Ctrl and +/- (or Ctrl and scroll), with a zoom control in the title bar and in the Tools menu. Your zoom level is remembered.
+- Sites: the sites sidebar can be dragged wider or narrower, and double-clicked to reset.
+- Privacy: new Privacy section in Preferences. ForgeKit now sends an anonymous snapshot of how it's set up — version numbers and counts, never project names, domains, paths, code or database contents. It's on by default, "View analytics data" shows you the exact payload, and one checkbox turns it off entirely.
+
+### Improved
+- enable OPcache by default for new PHP versions. It's free performance.
+- phpMyAdmin: fixed "cannot prepare phpMyAdmin: ... Access is denied" on start/open for users whose config directory blocks file replacement (e.g. certain network drive permissions) - now falls back to a direct write if the atomic rename fails.
+- Quitting: closing ForgeKit now shuts down phpMyAdmin and cleans up its background processes properly. Previously they could be left running after the app had closed.
+- Databases: new "Connection info" button next to phpMyAdmin, with copyable Laravel .env and WordPress wp-config.php blocks for that server.
+- Agent status: the status dot no longer pulses to save cpu and battery while in background
+- Status bar: Improved UI
+- Messages: "no code editor selected" and "could not open a terminal" errors now carry an "Open Preferences" button that jumps straight to Preferred Apps.
+- Window: the app can now be resized much smaller, both narrower and shorter, and the layout adapts instead of clipping.
+- Footer: improved footer UI with new Contact and Support us links.
+- Downloads: moved next to the other footer buttons, and stays usable while a modal is open.
+- Aura Farming Box: opens in its own window now, so it shows a lot more and doesn't take up space in the main app.
+- Preferences: the section list on the left now highlights and jumps to every section correctly on a tall window.
+- New Contact and Support us links in the app
+- General UI improvements throughout the app.
+
+---
+
+
 ### 1.8.0 | Mailpit, Redis, Memcached and a lot of UI improvements
 2026-07-25
 
