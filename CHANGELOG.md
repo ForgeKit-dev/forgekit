@@ -1,5 +1,14 @@
 # Changelog
 
+### 1.8.2 Various bug fixes and small improvements
+2026-09-23
+
+### Improved
+- Port detection: now works on non-English Windows, where running services could wrongly show as stopped or report \"PID 0\".
+- Hosts file: a scheduled task that loses its permissions is now repaired automatically instead of failing silently.
+- Nginx: clearer error when a FastCGI port is unavailable but no process is using it.
+
+---
 
 ### 1.8.1 Zoom, a resizable layout, and new privacy controls
 2026-09-07
