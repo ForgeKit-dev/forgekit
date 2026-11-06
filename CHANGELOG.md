@@ -1,5 +1,29 @@
 # Changelog
 
+### 1.9.0 | Better Onboarding | Project Detection
+2026-11-06
+
+### New Features
+- Onboarding: new first-run setup that picks a stack, installs PHP and a web server in parallel, and ends on your first working site
+- Getting started: a checklist next to Manage Binaries that points out the rest of ForgeKit, one step at a time
+- Sites: Laravel, Symfony, WordPress and other common frameworks are detected, so you can pick the project root or its public folder and either works
+- Theme: new Auto option that follows your Windows light or dark setting, now the default for new installs
+
+### Improved
+- App: update tauri to hopefully fix the random and rare UI crashing in the background
+- App: everything below the agent bar stays hidden until the agent is running, instead of showing an app that doesn't work yet
+- Sites: Terminal, Open folder and Open in editor now open the project root, even when the site points at its public folder
+- Downloads: binary downloads show their progress in MB
+- Downloads: fixed two downloads started at the same moment getting mixed up
+- Server pages: the extra "add" button no longer shows next to the empty-state one
+- Databases: MySQL and MariaDB now write to their error log (Logs › mysql-error.log), and a failed start shows its last lines
+- PHP: display_errors, display_startup_errors and error_reporting set in php.ini are now respected on Nginx web servers instead of being forced on
+- PHP: error_reporting and log_errors in php.ini are no longer reset to defaults when runtimes are rescanned or a web server's PHP config is rewritten
+- Nginx: folder redirects (e.g. /blog to /blog/) now stay on the site's domain instead of jumping to the web server's internal port, applied the next time a site on that server is saved
+- Nginx: .user.ini files can no longer be downloaded from sites, applied the next time a site on that server is saved
+
+---
+
 ### 1.8.2 Various bug fixes and small improvements
 2026-09-23
 
