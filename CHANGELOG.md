@@ -1,5 +1,16 @@
 # Changelog
 
+
+### 1.9.1 | improvements for php 8.6
+2026-11-20
+
+### Improved
+- Installer: the \"Install the latest Microsoft Visual C++ Runtime\" option now installs Microsoft current runtime (14.52) instead of an older one (14.44), so PHP 8.6 starts on every machine
+- Web servers: if a PHP version needs a newer Microsoft Visual C++ Runtime than the PC has (e.g. PHP 8.6), starting the server now says so and links the download, instead of failing with a crash
+- Updates: fixed the installer sometimes closing itself without updating when ForgeKit was still open, and ForgeKit now always closes once the installer starts
+
+---
+
 ### 1.9.0 | Better Onboarding | Project Detection
 2026-11-06
 
