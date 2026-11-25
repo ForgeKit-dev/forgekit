@@ -1,6 +1,25 @@
 # Changelog
 
 
+
+### 1.9.2 | Download and First Setup Improvements
+2026-11-25
+
+### New Features
+- Downloads: a download that receives no data for 15 seconds is now marked as stalled, with a Retry button next to Cancel. Retry starts the download again from the beginning
+- Downloads: failed downloads have a Copy button that copies the full error, handy for bug reports
+- Downloads: the Downloads panel has a Hide button
+- 
+### Improved
+- Manage Binaries: a binary you just installed now shows as Installed straight away, without closing and reopening the window
+- Manage Binaries: binaries are listed newest version first, and no longer jump around when you install or remove one
+- Ports: ForgeKit now warns you when another program, such as Apache from XAMPP or WAMP, is using port 80 or 443 at the same time. Windows let both run, and the other program silently answered your .test sites
+- Setup: a busy port 80 or 443 no longer stops you from finishing setup. ForgeKit shows what\u0027s using it and how to free it, and you can continue and fix it later
+- Setup: stalled downloads can be retried during setup, the same as in the Downloads panel
+- Setup: if your web server fails to start, the error shows straight away, and Retry starts the same server again instead of creating another one
+                                         
+---
+
 ### 1.9.1 | improvements for php 8.6
 2026-11-20
 
